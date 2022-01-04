@@ -1,4 +1,4 @@
-# Okta Express Blog
+# Okta Express Basic CRUD App Example
 
 This tutorial shows you how to build a Node.js blog using [Express.js](https://expressjs.com/), [OpenID Connect](/blog/2017/07/25/oidc-primer-part-1), and [Sequelize.js](http://docs.sequelizejs.com/).
 
@@ -16,8 +16,8 @@ Please read [Tutorial: Build a Basic CRUD App with Node.js](https://developer.ok
 
 To install this example application, run the following commands:
 ```
-git clone https://github.com/oktadev/okta-express-blog.git
-cd okta-express-blog
+git clone https://github.com/oktadev/okta-express-basic-crud-app-example.git
+cd okta-express-basic-crud-app-example
 ```
 
 ### Create an OIDC Application in Okta
