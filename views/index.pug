@@ -1,0 +1,19 @@
+extends layout
+
+block variables
+  - var title = "Home"
+
+block content
+  h2.text-center Recent Posts
+
+  if posts == null
+    p.empty.text-center Uh oh. There are no posts to view!
+
+  .posts
+    ul
+      each post in posts
+        .row
+          .offset-sm-2.col-sm-8
+            li
+              a(href="/" + post.slug, title=post.title)= post.title
+              span &nbsp; by #{post.authorName}

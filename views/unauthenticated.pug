@@ -1,0 +1,10 @@
+extends layout
+
+block variables
+  - var title = "Unauthenticated"
+
+block content
+  .unauthenticated
+    h2.text-center Whoops!
+    p.
+      You must be signed in to view this page. Please #[a(href="/users/login", title="Login") login] to view this page.

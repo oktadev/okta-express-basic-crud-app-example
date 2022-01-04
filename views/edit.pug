@@ -1,0 +1,23 @@
+extends layout
+
+block variables
+  - var title = post.title
+
+block content
+  h2.text-center Edit Post
+
+  .row
+    .offset-sm-2.col-sm-8
+      form(method="post")
+        .form-group
+          label(for="title") Post Title
+          input.form-control#title(type="text", name="title", value=post.title, required)
+        .form-group
+          label(for="body") Post Body
+          textarea.form-control#post(name="body", rows="6", required)= post.body
+        button.btn.btn-primary.submit-btn(type="submit") Update
+
+  .row
+    .offset-sm-2.col-sm-8
+      .body !{post.body}
+      p.author Written by #{post.authorName}

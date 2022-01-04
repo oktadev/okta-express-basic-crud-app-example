@@ -1,0 +1,38 @@
+extends layout
+
+block variables
+  - var title = "Dashboard"
+
+block content
+  .row
+    .offset-sm-2.col-sm-8
+      h2 Create a Post
+
+  if post != undefined
+    .row
+      .offset-sm-2.col-sm-8
+        .alert.alert-success(role="alert").text-center
+          p Your new post was created successfully! #[a(href="/" + post.slug) View it?]
+
+  .row
+    .offset-sm-2.col-sm-8
+      form(method="post")
+        .form-group
+          label(for="title") Post Title
+          input.form-control#title(type="text", name="title", placeholder="Title", required)
+        .form-group
+          label(for="body") Post Body
+          textarea.form-control#post(name="body", rows="6", required)
+        button.btn.btn-primary.submit-btn(type="submit") Submit
+
+  .row
+    .offset-sm-2.col-sm-8
+      h2.your-posts Your Posts
+      ul.edit
+        each post in posts
+          li
+            a(href="/" + post.slug, title=post.title)= post.title
+            form.hidden(method="post", action="/" + post.slug + "/delete")
+              button.btn.btn-outline-danger.delete Delete
+            a(href="/" + post.slug + "/edit", title=post.title)
+              button.btn.btn-outline-secondary Edit
