@@ -1,5 +1,12 @@
+// Ignore macOS specific files
+.DS_Store
+public/.DS_Store
+
 // Ignore the node_modules folder
 node_modules/
 
 // Ignore the SQLite database
 database.sqlite
+
+// Ignore the .okta.env file
+.okta.env
