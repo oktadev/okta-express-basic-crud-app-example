@@ -43,7 +43,7 @@ You will be prompted to select the following options:
 
 Run `cat .okta.env` (or `.okta.env` on Windows) to see the issuer and credentials for your app. Update `app.js` with your Okta settings.
 
-Finally, create a new API token. You can find the steps to create an API token [here](https://developer.okta.com/docs/guides/create-an-api-token/main/). Update `auth.js` with the Org URL and the API Token.
+Finally, create a new API token. You can find the steps to create an API token [here](https://developer.okta.com/docs/guides/create-an-api-token/main/). Update `auth.js` with your Org Domain and the API Token.
 
 ### Install dependencies and run the app
 
